@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_05_23_153504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "barbecues", force: :cascade do |t|
+    t.string "barbecue_model"
+    t.string "barbecue_type"
+    t.integer "barbecue_price"
+    t.text "barbecue_description"
+    t.string "barbecue_location"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
