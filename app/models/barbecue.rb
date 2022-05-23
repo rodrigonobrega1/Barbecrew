@@ -1,0 +1,2 @@
+class Barbecue < ApplicationRecord
+end
