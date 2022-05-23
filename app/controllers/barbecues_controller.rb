@@ -1,2 +1,4 @@
 class BarbecuesController < ApplicationController
+  
+
 end
