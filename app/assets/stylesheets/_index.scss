@@ -1,0 +1,118 @@
+// Import page-specific CSS files here.
+
+.lists{
+    width: 720px;
+    margin: 0 auto;
+  
+  }
+  
+  .box-flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    margin: 10px;
+  }
+  
+  
+  
+  .box-display{
+    background-color: #fff;
+    margin: 10px 0 50px;
+    height: 351px;
+    border: 1px solid #E8E8E8;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .box-image{
+    width: 100%;
+    height: 300px;
+  }
+  
+  .box-title{
+    text-transform: uppercase;
+    background-color: #150e56;
+    font-weight: 700;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    color: #494C62;
+  }
+  
+  .box-title a{
+    color: #fff;
+  }
+  
+  
+  .footer{
+    background-color: #fff;
+  }
+  
+  .left-border{
+    margin: 20px 0;
+    border-left: 4px solid #4820ad;
+    padding: 10px;
+  }
+  
+  .img-list{
+    width: 400px;
+    height: 200px;
+  
+  }
+  
+  .list-box{
+    background-color:#fff;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 350px;
+  }
+  
+  .list-title{
+    padding: 20px 0 0 0;
+    text-align: center;
+  }
+  
+  .click-text-content{
+    margin-left: 0px;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .btn-click{
+    margin-left: 70px;
+    text-align: center;
+    padding: 5px 35px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .click{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    border-radius: 0 20px 20px 0;
+  }
+  
+  .click a:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .fa-plus-circle{
+    margin-left: 30px;
+  }
+  
+  
+  // footer
+  
+  .footer{
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+  }
+  
+  .fa-github{
+     color: #150e56;
+  }
