@@ -21,11 +21,9 @@ ActiveRecord::Schema.define(version: 2022_05_24_123014) do
     t.integer "barbecue_price"
     t.text "barbecue_description"
     t.string "barbecue_location"
-    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "picture"
-    t.index ["user_id"], name: "index_barbecues_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
