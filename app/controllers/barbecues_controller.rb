@@ -4,6 +4,11 @@ class BarbecuesController < ApplicationController
 
   def index
     @barbecues = Barbecue.all
+    @search = params["search"]
+    if @search.present?
+      @model = @search["barbecue_model"]
+      @barbecues = Barbecue.where(barbecue_model: @model)
+    end
   end
 
   def show

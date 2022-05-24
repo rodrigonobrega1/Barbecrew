@@ -1,39 +1,17 @@
 .banner-container{
-    position: relative;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url("images/mike-kilcoyne-_Mw0_ayYPl0-unsplash.jpg");
+    position:relative;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url("evan-wise-D99y38Na5Xo-unsplash");
     height: 70vh;
     background-position: center;
     background-size: cover;
     color: #fff;
     background-repeat: no-repeat;
   
-    h1{
-      font-size: 40px;
-      font-weight: 700;
-    }
-  
-  
-    ul{
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    li{
-      padding: 5px 20px;
-      margin: 0 20px;
-      list-style-type: none;
-    }
-  
     .banner-nav-bar{
       padding: 50px;
       display: flex;
       justify-content: space-between;
     }
-  
-    .fa-play{
-      margin-right: 10px;
-    }
-  
   
     .banner-info{
       position: absolute;
@@ -45,66 +23,13 @@
       margin: 0;
       font-size: 42px;
       font-weight: 700;
+      text-align: center;
+      padding-top: 200px;
     }
   
     .banner-subtitle{
       font-weight: 300;
       margin: 0 0 10px;
       font-size: 28px;
-    }
-  }
-  
-  
-  
-  .btn-sign{
-    width: 220;
-    background-color: #FF0079;
-  }
-  
-  .btn-infos{
-    width: 390px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    font-weight: bold;
-  
-    .btn-add{
-      padding: 5px 20px;
-      width: 180px;
-      background-color: #FF0079;
-    }
-  
-    .btn-add a{
-      color: #fff;
-      text-decoration: none;
-    }
-  
-    .btn-more-info{
-      padding: 5px 20px;
-      width: 180px;
-      border: 1px solid #fff;
-    }
-  
-    .btn-more-info a{
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-  
-  
-  
-  .movie-category{
-    text-align: center;
-    padding: 0 5px;
-    color: #fff;
-    margin-top: 20px;
-    width: 400px;
-    background-color: #FF0079;
-    border-radius: 0 20px 20px 0;
-  
-    .category-title{
-      padding: 10px;
-      font-size: 22px;
-      font-weight: 700;
     }
   }
