@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @booking = @booking.barbecue.create(booking_params)
     if @booking.save
+      # TODO
+    end
   end
 
   private
