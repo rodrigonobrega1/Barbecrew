@@ -1,18 +1,44 @@
 <div>
-    <%= render 'header' %>
-    <div class="container">
-      <div class="row">
-            <div class="col-xs-12 col-sm-8 offset-sm-2">
-                <div class= "barbecue-title"><h1>Barbecues to Rent</h1>
-                </div>
-                    <div>
-                        <% @barbecues.each do |barbecue| %>
-                        <h3><%= barbecue.barbecue_model %></h3>
-                        <p><%= barbecue.barbecue_description %></p>
-                        <% end %>
-                    </div>
-            </div>
-        </div>
+    <div><%= render 'header' %>
     </div>
-</div>
 
+
+<div class="barbecue-title mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our barbecues</h1>
+
+            <div class="container">
+                
+                <div class="row">
+                    <% @barbecues.each do |barbecue| %>
+                    <div class="col-md-4">
+                        <div class="flat-card">
+                        <div class="flat-card-image" style="background-image: url('<%= barbecue.picture %>')"></div>
+                        <div class="flat-card-content">
+                            <div class="flat-card-title">
+                            <h4><%= barbecue.barbecue_model %></h4>
+                            </div>
+                            <p><%= barbecue.barbecue_description %></p>
+                        
+                        </div>
+                        <div class="flat-card-actions">
+                            <%= link_to 'More info', barbecue_path(barbecue) %>
+                            <%= link_to 'Edit', barbecue_path(barbecue), class: 'ms-3 text-warning' %>
+                            <%= link_to "Remove", barbecue_path(barbecue),
+                                method: :delete, 
+                                data: { confirm: "Are you sure?" },
+                                class: 'ms-3 text-danger'
+                            %>
+                        </div>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+
+    </div>
+  </div>
+
+
+</div>
