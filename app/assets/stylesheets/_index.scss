@@ -30,12 +30,24 @@
   
   .box-title{
     text-transform: uppercase;
-    background-color: #150e56;
+    background-color: #E8E8E8;
     font-weight: 700;
     height: 50px;
     text-align: center;
     padding: 10px;
     color: #494C62;
+  }
+
+  .barbecue-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 50px;
+    color: #494C62;
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 30px;
   }
   
   .box-title a{

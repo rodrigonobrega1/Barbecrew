@@ -1,15 +1,16 @@
 <div>
     <%= render 'header' %>
-
     <div class="container">
       <div class="row">
             <div class="col-xs-12 col-sm-8 offset-sm-2">
-                <h1>Pages#home</h1>
-                <p>YES! WE HAVE HOME PAGE</p>
-                <% @barbecues.each do |barbecue| %>
-                <h3><%= barbecue.barbecue_model %></h3>
-                <p><%= barbecue.barbecue_description %></p>
-                <% end %>
+                <div class= "barbecue-title"><h1>Barbecues to Rent</h1>
+                </div>
+                    <div>
+                        <% @barbecues.each do |barbecue| %>
+                        <h3><%= barbecue.barbecue_model %></h3>
+                        <p><%= barbecue.barbecue_description %></p>
+                        <% end %>
+                    </div>
             </div>
         </div>
     </div>
