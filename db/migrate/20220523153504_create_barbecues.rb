@@ -6,7 +6,7 @@ class CreateBarbecues < ActiveRecord::Migration[6.1]
       t.integer :barbecue_price
       t.text :barbecue_description
       t.string :barbecue_location
-
+      t.references :user
       t.timestamps
     end
   end
