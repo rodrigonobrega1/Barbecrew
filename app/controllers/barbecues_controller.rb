@@ -1,5 +1,7 @@
 class BarbecuesController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @barbecues = Barbecue.all
   end
