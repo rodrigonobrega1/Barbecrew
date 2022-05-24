@@ -23,12 +23,12 @@
                         
                         </div>
                         <div class="flat-card-actions">
-                            <%= link_to 'More info', barbecue_path(barbecue) %>
-                            <%= link_to 'Edit', barbecue_path(barbecue), class: 'ms-3 text-warning' %>
+                            <%= link_to 'More info', barbecue_path(barbecue), class: "btn btn-outline-primary" %>
+                            <%= link_to 'Edit', barbecue_path(barbecue), class: "btn btn-outline-secondary" %>
                             <%= link_to "Remove", barbecue_path(barbecue),
                                 method: :delete, 
                                 data: { confirm: "Are you sure?" },
-                                class: 'ms-3 text-danger'
+                                class:  "btn btn-outline-danger"
                             %>
                         </div>
                         </div>
