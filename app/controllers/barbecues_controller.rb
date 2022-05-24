@@ -1,6 +1,7 @@
 class BarbecuesController < ApplicationController
+
   def index
-    @barbecues: Barbecue.all
+    @barbecues = Barbecue.all
   end
 
   def show
@@ -20,6 +21,21 @@ class BarbecuesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit; end
+
+  def update
+    @barbecue.update(barbecue_params)
+
+    redirect_to barbecues_path(@barbecue)
+  end
+
+  def destroy
+    @barbecue = Barbecue.find(params[:id])
+    @barbecue.destroy
+
+    redirect_to @barbecue.user
   end
 
   private
