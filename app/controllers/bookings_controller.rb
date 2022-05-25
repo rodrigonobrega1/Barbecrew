@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
 
   before_action :set_booking, only: :destroy
-  before_action :set_user
 
   def new
     @booking = Booking.new
@@ -9,9 +8,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = @user
+    @booking.user = current_user
     if @booking.save
-      redirect_to user_path(@user)
+      redirect_to root_path
     else
       render :new
     end
@@ -19,7 +18,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to user_path(@user)
+    redirect_to root_path
   end
 
   private
@@ -30,9 +29,5 @@ class BookingsController < ApplicationController
 
   def set_barbecue
     @barbecue = Barbecue.find(params[:id])
-  end
-
-  def set_user
-    @user = user.find(params[:user_id])
   end
 end

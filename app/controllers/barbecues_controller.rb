@@ -24,7 +24,7 @@ class BarbecuesController < ApplicationController
     @user = User.find(params[:user_id])
     @barbecue.user = @user
     if @barbecue.save
-      redirect_to barbecue_path
+      redirect_to root_path
     else
       render :new
     end
