@@ -21,10 +21,14 @@ class BarbecuesController < ApplicationController
 
   def create
     @barbecue = Barbecue.new(barbecue_params)
-    @user = User.find(params[:user_id])
+    @user = current_user
     @barbecue.user = @user
     if @barbecue.save
+
       redirect_to root_path
+
+      redirect_to users_path
+
     else
       render :new
     end
