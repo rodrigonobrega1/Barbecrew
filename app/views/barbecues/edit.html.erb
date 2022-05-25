@@ -1,0 +1,15 @@
+<div class="row justify-content-center">
+  <div class="col-4">
+    <h4 class="row justify-content-center">Edit this Barbegrill: </h4>
+  </div>
+</div>
+
+<%= render 'form', barbecue: @barbecue %>
+
+
+<div class="row justify-content-center d-flex justify-content-center p-2">
+  <div class="col-4">
+    <%=  link_to 'See the BarbeGrill', @barbecue, class: 'btn btn-outline-success btn-block w-40 p-2'%>
+    <%= link_to 'Go Back to your page', users_path, class: 'btn btn-outline-success btn-block w-40 p-2'%>
+  </div>
+</div>
