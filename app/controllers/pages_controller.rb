@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
-  def home
-  end
+
+  before_action :set_barbecue,
+
+
+
+
 end
