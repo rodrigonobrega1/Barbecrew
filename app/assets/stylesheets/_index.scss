@@ -39,7 +39,6 @@
   }
 
   .barbecue-title{
-    text-transform: uppercase;
     font-weight: 700;
     height: 50px;
     color: #494C62;
@@ -98,6 +97,11 @@
     font-weight: bold;
   }
   
+  .btn-group{
+    margin-top: 10px;
+    padding: 5px 35px;
+  }
+  
   .click{
     text-decoration: none;
     color: #fff;
@@ -141,14 +145,14 @@
 
 
   .flat-card {
-    width: 100%;
-    height: 420px;
+    width: 25%;
+    height: 350px;
     position: relative;
     margin: .5rem 0 1rem 0;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-    font-size: 12px;
+    font-size: 10px;
   }
   
   .flat-card-image {
@@ -162,15 +166,19 @@
   .flat-card-content {
     padding: 24px;
     background-color: #F8F9FA;
+    font-size: 9px;
+    height: 120px;
+  }
+
+  .flat-card-title {
     font-size: 12px;
-    height: 180px;
   }
   
   .flat-card-actions {
     position: relative;
     background-color: inherit;
     border-top: 1px solid rgba(160,160,160,0.2);
-    padding: 16px 24px;
+    padding: 10px 10px;
   }
   
   .flat-form {
