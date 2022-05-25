@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_05_24_123014) do
   create_table "barbecues", force: :cascade do |t|
     t.string "barbecue_model"
     t.string "barbecue_type"
-    t.float "barbecue_price"
+    t.integer "barbecue_price"
     t.text "barbecue_description"
     t.string "barbecue_location"
     t.bigint "user_id"
