@@ -1,14 +1,16 @@
-<div class="row justify-content-center">
-    <div class="col-4">
-      <h4 class="row justify-content-center">Add a new BarbeGrill for renting!</h4>
-      <%= simple_form_for [@barbecue] do |f| %>
-        <%= f.input :barbecue_model, label: "Grill's model", placeholder: "Type in the grill's model" %>
-        <%= f.input :barbecue_type, label: "Grill's type", placeholder: "Electric, Gas, Charcoal, etc.." %>
-        <%= f.input :barbecue_price, label: "Grill's renting price", placeholder: "What is the daily rate?" %>
-        <%= f.input :barbecue_description, label: "Grill's description", placeholder: "Type a short and objective description" %>
-        <%= f.input :barbecue_location, label: "Grill's location", placeholder: "Type in he adress?" %>
-        <%= f.input :picture, label: "Grill's beautiful pic", placeholder: "www.google.com/image" %>
-        <%= f.submit 'Add a BarbeGrill!', class: 'btn btn-outline-success btn-block w-100' %>
-      <% end %>
-    </div>
+<div class="row justify-content-center d-flex justify-content-around align-self-center p-1">
+  <div class="col-4">
+    <h4 class="row justify-content-center">Add a new BarbeGrill for renting!</h4>
   </div>
+</div>
+
+<div class="row justify-content-center d-flex justify-content-around align-self-center">
+  <%= render 'form', barbecue: @barbecue %>
+</div>
+
+<div class="row justify-content-center p-2">
+  <div class="col-4 row justify-content-center d-flex justify-content-around align-self-center p-1">
+    <%=  link_to 'See the BarbeGrill', @barbecue, class: 'btn btn-outline-success btn-block w-40'%>
+    <%= link_to 'Go Back to your page', users_path, class: 'btn btn-outline-success btn-block w-40'%>
+  </div>
+</div>
