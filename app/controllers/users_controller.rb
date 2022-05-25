@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   # GET /trainers/1
   def show
-    @barbecue = Barbecue.new
+    @user = current_user
   end
 
   private
