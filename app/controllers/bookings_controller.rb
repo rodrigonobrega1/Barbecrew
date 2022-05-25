@@ -3,14 +3,14 @@ class BookingsController < ApplicationController
   before_action :set_user
 
   def new
-    @bookmark = Bookmark.new
+    @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @bookmark.user = @user
-    if @bookmark.save
-      redirect_to list_path(@user)
+    @booking.user = @user
+    if @booking.save
+      redirect_to user_path(@user)
     else
       render :new
     end
