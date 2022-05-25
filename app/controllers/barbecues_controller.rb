@@ -4,12 +4,25 @@ class BarbecuesController < ApplicationController
 
   def index
     @barbecues = Barbecue.all
-    @search = params["search"]
-    if @search.present?
-      @model = @search["barbecue_model"]
-      @barbecues = Barbecue.where(barbecue_model: @model)
+   # @search = params["search"]
+   # if @search.present?
+   #   @model = @search["barbecue_model"]
+   #   @barbecues = Barbecue.where(barbecue_model: @model)
+   # end
+
+    @markers = @barbecues.geocoded.map do |barbecue|
+      {
+        lat: barbecue.latitude,
+        lng: barbecue.longitude
+        #info_window: render_to_string(partial: "info_window", locals: { barbecues: barbecue })
+        #image_url: helpers.asset_url("barbecrew2")
+      }
     end
   end
+
+
+
+
 
   def show
   end
