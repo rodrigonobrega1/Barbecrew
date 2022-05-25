@@ -34,12 +34,14 @@ class BarbecuesController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @barbecue = Barbecue.find(params[:id])
+  end
 
   def update
     @barbecue.update(barbecue_params)
 
-    redirect_to barbecues_path(@barbecue)
+    redirect_to users_path
   end
 
   def destroy
