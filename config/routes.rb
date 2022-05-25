@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root to: 'barbecues#index'
+  resources :barbecues
   devise_for :users do
   end
-  resources :barbecues
+
   resources :bookings
   resources :users
 end
