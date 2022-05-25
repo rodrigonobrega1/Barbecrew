@@ -1,5 +1,5 @@
 class BarbecuesController < ApplicationController
-
+  before_action :set_barbecue, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: :index
 
   def index
@@ -12,7 +12,6 @@ class BarbecuesController < ApplicationController
   end
 
   def show
-    @barbecue = Barbecue.find(params[:id])
   end
 
   def new
@@ -24,36 +23,35 @@ class BarbecuesController < ApplicationController
     @user = current_user
     @barbecue.user = @user
     if @barbecue.save
-
-      redirect_to root_path
-
-      redirect_to users_path
-
+      redirect_to user_path(current_user)
     else
       render :new
     end
   end
 
   def edit
-    @barbecue = Barbecue.find(params[:id])
   end
 
   def update
-    @barbecue.update(barbecue_params)
-
-    redirect_to users_path
+    if @barbecue.update(barbecue_params)
+      redirect_to user_path(current_user)
+    else
+      render :edit
+    end
   end
 
   def destroy
-    @barbecue = Barbecue.find(params[:id])
     @barbecue.destroy
-
     redirect_to @barbecue.user
   end
 
   private
 
   def barbecue_params
-    params.require(:barbecue).permit(:barbecue_model, :barbecue_type, :barbecue_price, :barbecue_description, :barbecue_location)
+    params.require(:barbecue).permit(:barbecue_model, :barbecue_type, :barbecue_price, :barbecue_description, :barbecue_location, :picture, :user_id)
+  end
+
+  def set_barbecue
+    @barbecue = Barbecue.find(params[:id])
   end
 end
