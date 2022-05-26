@@ -1,6 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
-  before_action :set_booking, only: :destroy
+  def index
+    @bookings = Booking.all
+  end
+
+  def show; end
 
   def new
     @booking = Booking.new
@@ -24,7 +29,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user_id, :barbecue_id)
+    params.require(:booking).permit(:date_in, :date_out, :barbecue_id)
   end
 
   def set_barbecue
