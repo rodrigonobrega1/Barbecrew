@@ -4,7 +4,7 @@
       <h3>My Barbecues</h3>
 <br>
             <div class="container">
-                
+
                 <div class="row">
                     <% @user.barbecues.each do |barbecue| %>
                     <div class="col-md-2">
@@ -15,7 +15,7 @@
                             <h6><%= barbecue.barbecue_model %></h6>
                             </div>
                             <p><%= barbecue.barbecue_description %></p>
-                        
+
                         </div>
                         <div class="flat-card-actions">
                         <div class="btn-group btn-sm" role="group" aria-label="Button group">
