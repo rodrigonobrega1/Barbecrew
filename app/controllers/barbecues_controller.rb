@@ -50,8 +50,9 @@ class BarbecuesController < ApplicationController
   end
 
   def destroy
+    #Incluir o botão de destruir no view-show-barbecue
     @barbecue.destroy
-    redirect_to @barbecue.user
+    redirect_to user_path(current_user)
   end
 
   private
