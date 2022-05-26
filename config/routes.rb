@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root to: 'barbecues#index'
-  resources :barbecues
+  resources :barbecues do
+    resources :bookings, only: [:new, :create, :edit, :update]
+  end
   devise_for :users do
   end
 
-  resources :bookings
+  resources :bookings, only: [:index, :show, :destroy]
   resources :users
 end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
