@@ -9,7 +9,7 @@
      
       <div class="flat-form2">
           <%= f.label :email %>
-          <%= f.input :email, label: false, required: true, autofocus: true %>
+          <%= f.input :email, label: false, required: true, autofocus: true, input_html: { class: "form-nice-class" } %>
       </div>
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -19,29 +19,29 @@
           <%= f.input :password,
                       label: false,
                       required: false,
-                      input_html: { autocomplete: "new-password" } %>
+                      input_html: { autocomplete: "new-password", class: "form-nice-class" } %>
       </div>
       <div class="flat-form2">
           <%= f.label :password_confirmation %>
           <%= f.input :password_confirmation,
                       label: false,
                       required: false,
-                      input_html: { autocomplete: "new-password" } %>
+                      input_html: { autocomplete: "new-password", class: "form-nice-class" } %>
       </div>
       <div class="flat-form2">
           <%= f.label :current_password %>
           <%= f.input :current_password,
                       label: false,
                       required: true,
-                      input_html: { autocomplete: "current-password" } %>
+                      input_html: { autocomplete: "current-password", class: "form-nice-class" } %>
           <%= f.label :confirm_your_changes %>
       </div>
         <div class="flat-form2">
-          <%= f.button :submit, "Update", class: "btn btn-primary" %>
+          <%= f.button :submit, "Update", class: "btn btn-primary form-nice-class" %>
         </div>
           <% end %>
         <div class="flat-form2">
-          <%= link_to "Back", :back, class: "btn btn-secondary" %>
+          <%= link_to "Back", :back, class: "btn btn-secondary form-nice-class" %>
         </div>
       <br>
       <div class="flat-form2">
