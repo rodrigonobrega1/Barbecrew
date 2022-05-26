@@ -12,15 +12,19 @@
 
             <div class="container">
 
-            <!-- <div style="width: 100%; height: 600px;"
-                data-controller="mapbox"
-                data-mapbox-markers-value="<%= @markers.to_json %>"
-                data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div> -->
+            <div class="flat-card2">
+                <div class="col-md-12">
+                    <div style="width: 100%; height: 300px;"
+                        data-controller="mapbox"
+                        data-mapbox-markers-value="<%= @markers.to_json %>"
+                        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+                    </div>
+                </div>
+            </div>
                 
                 <div class="row">
                     <% @barbecues.each do |barbecue| %>
-                    <div class="col-md-12">
+                    <div class="col-md-4">
                         <div class="flat-card">
                         <div class="flat-card-image" style="background-image: url('<%= barbecue.picture %>')"></div>
                         <div class="flat-card-content">
@@ -38,6 +42,7 @@
                         </div>
                     </div>
                     <% end %>
+
                 </div>
             </div>
 
