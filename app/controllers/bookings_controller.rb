@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bookings = Booking.all
+    @user = currente_user
+    @user.booking
   end
 
   def show; end
@@ -13,7 +14,6 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
     if @booking.save
       redirect_to root_path
     else
