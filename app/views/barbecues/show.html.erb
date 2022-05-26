@@ -17,19 +17,9 @@
 
     <div class="col-4">
       <div class="flat-show-card">
-        <h5>Book this barbecue!</h5>
 
-        <form action="">
-          <div class="input-group">
-            <span class="input-group-text" id="basic-addon1">From:</span>
-            <input type="text" class="form-control" placeholder="day/month/year" aria-label="Username" aria-describedby="basic-addon1">
-          </div>
-          <div class="input-group mt-2">
-            <span class="input-group-text" id="basic-addon1">To:</span>
-            <input type="text" class="form-control" placeholder="day/month/year" aria-label="Username" aria-describedby="basic-addon1">
-          </div>
-          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
-        </form>
+        <%= link_to "Book this Barbecue", new_booking_path, class: 'btn btn-success mt-3 form-nice-class' %>
+
       </div>
       <div class="flat-show-card">
         <h3>Details Price</h3>

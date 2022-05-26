@@ -4,27 +4,27 @@
       <%= simple_form_for [@barbecue] do |f| %>
        <div class="flat-form2">
        <%= f.label :Model %>
-        <%= f.input :barbecue_model, label: false, placeholder: "Type in the grill's model" %>
+        <%= f.input :barbecue_model, label: false, placeholder: "Type in the grill's model", :input_html => { class: "form-nice-class" } %>
         </div>
          <div class="flat-form2">
          <%= f.label :Type %>
-        <%= f.input :barbecue_type, label: false, placeholder: "Electric, Gas, Charcoal, etc.." %>
+        <%= f.input :barbecue_type, label: false, placeholder: "Electric, Gas, Charcoal, etc..", :input_html => { class: "form-nice-class" } %>
         </div>
          <div class="flat-form2">
          <%= f.label :Price %>
-        <%= f.input :barbecue_price, as: :string , label: false, placeholder: "What is the daily rate?" %>
+        <%= f.input :barbecue_price, as: :string , label: false, placeholder: "What is the daily rate?", :input_html => { class: "form-nice-class" } %>
         </div>
          <div class="flat-form2">
          <%= f.label :Description %>
-        <%= f.input :barbecue_description, label: false, placeholder: "Type a short and objective description" %>
+        <%= f.input :barbecue_description, label: false, placeholder: "Type a short and objective description", :input_html => { class: "form-nice-class" } %>
         </div>
          <div class="flat-form2">
          <%= f.label :Location %>
-        <%= f.input :barbecue_location, label: false, placeholder: "Type in the adress?" %>
+        <%= f.input :barbecue_location, label: false, placeholder: "Type in the adress?", :input_html => { class: "form-nice-class" } %>
         </div>
          <div class="flat-form2">
          <%= f.label :Picture %>
-        <%= f.input :picture, label: false, placeholder: "www.google.com/image" %>
+         <%= f.file_field :picture, label: false, placeholder: "upload photo" %>
         </div>
          <div class="flat-form2">
         <%= f.submit 'Add a BarbeGrill!', class: 'btn btn-success btn-block w-100 p-2' %>
