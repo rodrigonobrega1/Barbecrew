@@ -1,11 +1,16 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
+    #Bookings que EU FIZ
     @bookings = Booking.where(user: current_user)
+    #Bookings que fizeram das minhas churrasqueiras
+    @booked = current_user.barbecues.map do |barbecue|
+      barbecue.bookings
+    end
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @booking = Booking.new
@@ -31,7 +36,11 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
+
     params.require(:booking).permit(:date_in, :date_out)
+
+    params.require(:booking).permit(:user_id, :barbecue_id)
+
   end
 
   def set_barbecue
