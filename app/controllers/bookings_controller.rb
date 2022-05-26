@@ -9,12 +9,15 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @barbecue = Barbecue.find(params[:barbecue_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.barbecue = Barbecue.find(params[:barbecue_id])
     if @booking.save
-      redirect_to root_path
+      redirect_to bookings_path
     else
       render :new
     end
@@ -28,7 +31,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date_in, :date_out, :barbecue_id)
+    params.require(:booking).permit(:date_in, :date_out)
   end
 
   def set_barbecue
