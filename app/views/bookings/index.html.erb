@@ -1,3 +1,78 @@
 <h1> My barbecues bookings </h1>
 
+<div class="barbecue-title mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h3>My Barbecues booked</h3>
+<br>
 
+            <div class="container">
+
+                <div class="row">
+                    <% @bookings.each do |booking| %>
+                    <div class="col-md-2">
+                        <div class="flat-card2">
+                        <div class="flat-card-image" style="background-image: url('<%= booking.barbecue.picture %>')"></div>
+                        <div class="flat-card-content">
+                            <div class="flat-card-title">
+                            <h6><%= booking.barbecue.barbecue_model %></h6>
+                            <h6><%= booking.date_in %></h6>
+                            <h6><%= booking.date_out %></h6>
+                            </div>
+                            <p><%= booking.barbecue.barbecue_description %></p>
+
+                        </div>
+                        <div class="flat-card-actions">
+                        <div class="btn-group btn-sm" role="group" aria-label="Button group">
+                            <%= link_to 'More info', barbecue_path(booking.barbecue), class: "btn btn-outline-dark btn-sm" %>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+<br>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="barbecue-title mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h3>My bookings</h3>
+<br>
+
+            <div class="container">
+
+                <div class="row">
+                    <% @bookings.each do |booking| %>
+                    <div class="col-md-2">
+                        <div class="flat-card2">
+                        <div class="flat-card-image" style="background-image: url('<%= booking.barbecue.picture %>')"></div>
+                        <div class="flat-card-content">
+                            <div class="flat-card-title">
+                            <h6><%= booking.barbecue.barbecue_model %></h6>
+                            <h6><%= booking.date_in %></h6>
+                            <h6><%= booking.date_out %></h6>
+                            </div>
+                            <p><%= booking.barbecue.barbecue_description %></p>
+
+                        </div>
+                        <div class="flat-card-actions">
+                        <div class="btn-group btn-sm" role="group" aria-label="Button group">
+                            <%= link_to 'More info', barbecue_path(booking.barbecue), class: "btn btn-outline-dark btn-sm" %>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+<br>
+    </div>
+  </div>
