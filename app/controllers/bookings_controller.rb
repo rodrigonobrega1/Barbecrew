@@ -1,13 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @user = current_user
-    
-    @booking = Booking.all
-  end
-
-  def show; end
+  before_action :set_booking, only: :destroy
 
   def new
     @booking = Booking.new
@@ -15,6 +8,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     if @booking.save
       redirect_to root_path
     else
@@ -30,7 +24,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date_in, :date_out, :barbecue_id)
+    params.require(:booking).permit(:user_id, :barbecue_id)
   end
 
   def set_barbecue
