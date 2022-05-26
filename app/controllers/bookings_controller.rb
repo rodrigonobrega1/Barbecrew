@@ -4,9 +4,11 @@ class BookingsController < ApplicationController
     #Bookings que EU FIZ
     @bookings = Booking.where(user: current_user)
     #Bookings que fizeram das minhas churrasqueiras
-    @booked = current_user.barbecues.map do |barbecue|
-      barbecue.bookings
-    end
+    #@booked = current_user.barbecues.flat_map do |barbecue|
+    #  barbecue.bookings
+    #end
+
+    @booked = Booking.where(barbecues: { user: current_user }).joins(:barbecue)
   end
 
   def show
