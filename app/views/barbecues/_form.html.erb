@@ -1,13 +1,35 @@
 <div class="row d-flex justify-content-center">
   <div class="col-4">
-    <%= simple_form_for [@barbecue] do |f| %>
-      <%= f.input :barbecue_model, label: "Grill's model", placeholder: "Type in the grill's model" %>
-      <%= f.input :barbecue_type, label: "Grill's type", placeholder: "Electric, Gas, Charcoal, etc.." %>
-      <%= f.input :barbecue_price, as: :string , label: "Grill's renting price", placeholder: "What is the daily rate?" %>
-      <%= f.input :barbecue_description, label: "Grill's description", placeholder: "Type a short and objective description" %>
-      <%= f.input :barbecue_location, label: "Grill's location", placeholder: "Type in the adress?" %>
-      <%= f.input :picture, label: "Grill's beautiful pic", placeholder: "www.google.com/image" %>
-      <%= f.submit 'Add a BarbeGrill!', class: 'btn btn-outline-success btn-block w-100 p-2' %>
-    <% end %>
+    <div class="flat-form2">
+      <%= simple_form_for [@barbecue] do |f| %>
+       <div class="flat-form2">
+       <%= f.label :Model %>
+        <%= f.input :barbecue_model, label: false, placeholder: "Type in the grill's model" %>
+        </div>
+         <div class="flat-form2">
+         <%= f.label :Type %>
+        <%= f.input :barbecue_type, label: false, placeholder: "Electric, Gas, Charcoal, etc.." %>
+        </div>
+         <div class="flat-form2">
+         <%= f.label :Price %>
+        <%= f.input :barbecue_price, as: :string , label: false, placeholder: "What is the daily rate?" %>
+        </div>
+         <div class="flat-form2">
+         <%= f.label :Description %>
+        <%= f.input :barbecue_description, label: false, placeholder: "Type a short and objective description" %>
+        </div>
+         <div class="flat-form2">
+         <%= f.label :Location %>
+        <%= f.input :barbecue_location, label: false, placeholder: "Type in the adress?" %>
+        </div>
+         <div class="flat-form2">
+         <%= f.label :Picture %>
+        <%= f.input :picture, label: false, placeholder: "www.google.com/image" %>
+        </div>
+         <div class="flat-form2">
+        <%= f.submit 'Add a BarbeGrill!', class: 'btn btn-success btn-block w-100 p-2' %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
