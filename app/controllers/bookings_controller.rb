@@ -1,10 +1,16 @@
 class BookingsController < ApplicationController
 
   def index
+    #Bookings que EU FIZ
     @bookings = Booking.where(user: current_user)
+    #Bookings que fizeram das minhas churrasqueiras
+    @booked = current_user.barbecues.map do |barbecue|
+      barbecue.bookings
+    end
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @booking = Booking.new
