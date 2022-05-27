@@ -1,5 +1,5 @@
 
-<div class="map" style="background-image: url('<%= @barbecue.picture %>')"></div>
+<div class="map" style="background-image: url('<%= @barbecue.picture.key.present? ? cl_image_path(@barbecue.picture.key) : '' %>')"></div>
 
 <div class="container margin-top-negative">
   <div class="row">
