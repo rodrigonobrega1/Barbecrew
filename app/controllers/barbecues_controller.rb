@@ -32,7 +32,7 @@ class BarbecuesController < ApplicationController
     @user = current_user
     @barbecue.user = @user
     if @barbecue.save
-      redirect_to user_path(current_user)
+      redirect_to user_barbecue_path(current_user)
     else
       render :new
     end
@@ -50,9 +50,8 @@ class BarbecuesController < ApplicationController
   end
 
   def destroy
-    #Incluir o botão de destruir no view-show-barbecue
     @barbecue.destroy
-    redirect_to user_path(current_user)
+    redirect_to user_barbecues_path
   end
 
   private
