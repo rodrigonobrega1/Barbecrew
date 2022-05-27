@@ -7,7 +7,7 @@
         <% @bookings.each do |booking| %>
             <div class="col-md-2">
                 <div class="flat-card3">
-                    <div class="flat-card-image" style="background-image: url('<%= booking.barbecue.picture %>')"></div>
+                    <div class="flat-card-image" style="background-image: url('<%= booking.barbecue.picture.key.present? ? cl_image_path(booking.barbecue.picture.key) : '' %>')"></div>
                     <div class="flat-card-content2">
                         <div class="flat-card-title">
                             <h6><%= booking.barbecue.barbecue_model %></h6>
@@ -36,7 +36,7 @@
         <% @booked.each do |booking| %>
             <div class="col-md-2">
                 <div class="flat-card3">
-                    <div class="flat-card-image" style="background-image: url('<%= booking.barbecue.picture %>')"></div>
+                    <div class="flat-card-image" style="background-image: url('<%= booking.barbecue.picture.key.present? ? cl_image_path(booking.barbecue.picture.key) : '' %>')"></div>
                     <div class="flat-card-content2">
 
                             <h6><%= booking.barbecue.barbecue_model %></h6>

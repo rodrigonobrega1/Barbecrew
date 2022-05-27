@@ -32,7 +32,7 @@ class BarbecuesController < ApplicationController
     @user = current_user
     @barbecue.user = @user
     if @barbecue.save
-      redirect_to user_barbecue_path(current_user)
+      redirect_to user_path(current_user)
     else
       render :new
     end
