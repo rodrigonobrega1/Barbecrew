@@ -1,13 +1,10 @@
 class BookingsController < ApplicationController
+  before_action :set_barbecue, only: [:show, :edit, :update, :destroy]
 
   def index
     #Bookings que EU FIZ
     @bookings = Booking.where(user: current_user)
     #Bookings que fizeram das minhas churrasqueiras
-    #@booked = current_user.barbecues.flat_map do |barbecue|
-    #  barbecue.bookings
-    #end
-
     @booked = Booking.where(barbecues: { user: current_user }).joins(:barbecue)
   end
 
@@ -32,20 +29,17 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    #redirect_to root_path
+    redirect_to bookings_path(@bookings), notice: 'The booking was successfully deleted.'
   end
 
   private
 
   def booking_params
-
     params.require(:booking).permit(:date_in, :date_out)
-
     params.require(:booking).permit(:user_id, :barbecue_id)
-
   end
 
   def set_barbecue
-    @barbecue = Barbecue.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 end
