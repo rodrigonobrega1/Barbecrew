@@ -45,7 +45,7 @@
 
                         <div class="flat-card-actions">
                         <div class="btn-group btn-sm" role="group" aria-label="Button group">
-                            <%= link_to 'Delete', booking_path(booking), class: "btn btn-outline-danger btn-sm" %>
+                            <%= link_to 'Delete', booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger btn-sm" %>
                         </div>
                         </div>
                     </div>
