@@ -21,6 +21,15 @@ class BarbecuesController < ApplicationController
   end
 
   def show
+    @markers = [
+      {
+        lat: @barbecue.latitude,
+        lng: @barbecue.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { barbecue: @barbecue }),
+        image_url: helpers.asset_url("barbecrew2")
+      }
+    ]
+
   end
 
   def new

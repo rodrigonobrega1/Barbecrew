@@ -2,13 +2,10 @@
     <div><%= render 'header' %>
     </div>
 
-
 <div class="barbecue-title mt-3">
   <div class="row">
     <div class="col-12">
-      <h3>Highlights</h3>
-
-
+      <h3>Search a barbecue for rent</h3>
 
             <div class="container">
 
@@ -29,9 +26,10 @@
                         <div class="flat-card-image" style="background-image: url('<%= barbecue.picture.key.present? ? cl_image_path(barbecue.picture.key) : '' %>')"></div>
                         <div class="flat-card-content">
                             <div class="flat-card-title">
-                            <h6><%= barbecue.barbecue_model %></h6>
+                            <h5><%= barbecue.barbecue_model %></h5>
                             </div>
-                            <p><%= barbecue.barbecue_description %></p>
+                            <h6><%= barbecue.barbecue_description %></h6>
+                            <h6>€<%= barbecue.barbecue_price %></h6>
                         
                         </div>
                         <div class="flat-card-actions">
@@ -45,9 +43,6 @@
 
                 </div>
             </div>
-
     </div>
   </div>
-
-
 </div>

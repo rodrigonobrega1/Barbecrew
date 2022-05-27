@@ -36,7 +36,6 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:date_in, :date_out)
-    params.require(:booking).permit(:user_id, :barbecue_id)
   end
 
   def set_barbecue
