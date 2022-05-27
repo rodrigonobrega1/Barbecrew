@@ -10,6 +10,7 @@
                     <div class="flat-card-image" style="background-image: url('<%= booking.barbecue.picture.key.present? ? cl_image_path(booking.barbecue.picture.key) : '' %>')"></div>
                     <div class="flat-card-content2">
                         <div class="flat-card-title">
+                        
                             <h6><%= booking.barbecue.barbecue_model %></h6>
                             <p>Date in: <%= booking.date_in %></p>
                             <p>Date out: <%= booking.date_out %></p>

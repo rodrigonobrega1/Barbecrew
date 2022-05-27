@@ -155,7 +155,7 @@
 
   .flat-card2 {
     width: 100%;
-    height: 350px;
+    height: 400px;
     position: relative;
     margin: .1rem 0 1rem 0;
     background-color: #fff;
@@ -218,6 +218,14 @@
   }
   
   .flat-card-actions {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,0.2);
+    padding: 10px 10px;
+    margin-left: 10px;
+  }
+
+  .flat-card-actions2 {
     position: relative;
     background-color: inherit;
     border-top: 1px solid rgba(160,160,160,0.2);
