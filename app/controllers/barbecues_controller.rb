@@ -51,7 +51,7 @@ class BarbecuesController < ApplicationController
 
   def destroy
     @barbecue.destroy
-    redirect_to user_barbecues_path
+    redirect_to user_path(current_user)
   end
 
   private
