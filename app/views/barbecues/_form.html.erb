@@ -1,7 +1,7 @@
 <div class="row d-flex justify-content-center">
   <div class="col-4">
     <div class="flat-form2">
-      <%= simple_form_for [@barbecue] do |f| %>
+      <%= simple_form_for(barbecue) do |f| %>
        <div class="flat-form2">
        <%= f.label :Model %>
         <%= f.input :barbecue_model, label: false, placeholder: "Type in the barbecue's model", :input_html => { class: "form-nice-class" } %>
@@ -23,8 +23,10 @@
         <%= f.input :barbecue_location, label: false, placeholder: "Type in the adress?", :input_html => { class: "form-nice-class" } %>
         </div>
          <div class="flat-form2">
-         <%= f.label :Picture %>
-         <%= f.file_field :picture, label: false, placeholder: "Upload photo" %>
+
+         <%= f.label :picture %>
+         <%= f.input :picture, as: :file %>
+
 
         </div>
          <div class="flat-form2">
