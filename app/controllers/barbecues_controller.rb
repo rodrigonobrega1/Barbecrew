@@ -15,7 +15,7 @@ class BarbecuesController < ApplicationController
         lat: barbecue.latitude,
         lng: barbecue.longitude,
         info_window: render_to_string(partial: "info_window", locals: { barbecue: barbecue }),
-        image_url: helpers.asset_url("barbecrew2")
+        image_url: helpers.asset_url("barbecrew2.png")
       }
     end
   end
@@ -26,7 +26,7 @@ class BarbecuesController < ApplicationController
         lat: @barbecue.latitude,
         lng: @barbecue.longitude,
         info_window: render_to_string(partial: "info_window", locals: { barbecue: @barbecue }),
-        image_url: helpers.asset_url("barbecrew2")
+        image_url: helpers.asset_url("barbecrew2.png")
       }
     ]
 
