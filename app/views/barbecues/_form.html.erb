@@ -4,7 +4,7 @@
       <%= simple_form_for [@barbecue] do |f| %>
        <div class="flat-form2">
        <%= f.label :Model %>
-        <%= f.input :barbecue_model, label: false, placeholder: "Type in the grill's model", :input_html => { class: "form-nice-class" } %>
+        <%= f.input :barbecue_model, label: false, placeholder: "Type in the barbecue's model", :input_html => { class: "form-nice-class" } %>
         </div>
          <div class="flat-form2">
          <%= f.label :Type %>
@@ -24,11 +24,11 @@
         </div>
          <div class="flat-form2">
          <%= f.label :Picture %>
-         <%= f.file_field :picture, label: false, placeholder: "upload photo" %>
+         <%= f.file_field :picture, label: false, placeholder: "Upload photo" %>
 
         </div>
          <div class="flat-form2">
-        <%= f.submit 'Add a BarbeGrill!', class: 'btn btn-success btn-block w-100 p-2' %>
+        <%= f.submit 'Add a Barbecue', class: 'btn btn-success btn-block w-100 p-2' %>
         </div>
       <% end %>
     </div>
