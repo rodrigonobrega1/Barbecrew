@@ -9,7 +9,7 @@
                     <% @user.barbecues.each do |barbecue| %>
                     <div class="col-md-2">
                         <div class="flat-card2">
-                        <div class="flat-card-image" style="background-image: url('<%= barbecue.picture %>')"></div>
+                        <div class="flat-card-image" style="background-image: url('<%= barbecue.picture.key.present? ? cl_image_path(barbecue.picture.key) : '' %>')"></div>
                         <div class="flat-card-content">
                             <div class="flat-card-title">
                             <h6><%= barbecue.barbecue_model %></h6>
