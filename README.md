@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+<h1>Barbecrew is an airbnb clone app, made with my study team during the fullstack course at le wagon lisbon.</h1>
